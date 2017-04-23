@@ -2061,7 +2061,7 @@
 			-webkit-animation: overlay-hide 1.5s ease-in forwards !important;
 			-ms-animation: overlay-hide 1.5s ease-in forwards !important;
 			animation: overlay-hide 1.5s ease-in forwards !important;
-			background: #1c1d26;
+			background: #FFFFFF;
 			content: '';
 			display: block;
 			height: 100%;
@@ -3755,7 +3755,7 @@
 				}
 
 				.spotlight .content {
-					background-color: #1c1d26;
+					background-color: #FFFFFF;
 					border-width: 0 !important;
 					border-top-width: 0.35em !important;
 					bottom: auto !important;
