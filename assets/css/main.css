@@ -3721,6 +3721,12 @@
 			#banner .content {
 				padding: 4.5em;
 			}
+			
+		/* GameBanner */
+
+			#gamebanner .content {
+				padding: 4.5em;
+			}
 
 		/* Footer */
 
@@ -3800,6 +3806,31 @@
 					}
 
 					#banner .content .image {
+						margin: 0;
+					}
+					
+		/* GameBanner */
+
+			#gamebanner {
+				background-attachment: scroll;
+			}
+
+				#gamebanner .goto-next {
+					height: 7em;
+				}
+
+				#gamebanner .content {
+					padding: 9em 0;
+					text-align: center;
+				}
+
+					#gamebanner .content header {
+						display: block;
+						margin: 0 0 2em 0;
+						text-align: center;
+					}
+
+					#gamebanner .content .image {
 						margin: 0;
 					}
 
@@ -4207,6 +4238,12 @@
 		/* Banner */
 
 			#banner .content {
+				padding: 3em 1.5625em 5.25em 1.5625em;
+			}
+			
+		/* GameBanner */
+
+			#gamebanner .content {
 				padding: 3em 1.5625em 5.25em 1.5625em;
 			}
 
