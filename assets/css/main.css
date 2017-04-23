@@ -3923,6 +3923,31 @@
 						height: 9em;
 						width: 9em;
 					}
+					
+		/* GameBanner */
+
+			#gamebanner {
+				box-shadow: 0 0.125em 0.5em 0 rgba(0, 0, 0, 0.25);
+				min-height: calc(100vh - 44px);
+			}
+
+				#gamebanner:before {
+					height: calc(100vh - 44px);
+				}
+
+				#gamebanner .content {
+					padding: 4.0625em 1.5em 4.875em 1.5em;
+				}
+
+					#gamebanner .content header h2 {
+						font-size: 1.5em;
+					}
+
+					#gamebanner .content .image {
+						height: 9em;
+						width: 9em;
+					}
+
 
 		/* Off-Canvas Navigation */
 
