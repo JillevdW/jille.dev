@@ -3357,7 +3357,7 @@
 				-webkit-transform: rotate(45deg);
 				-ms-transform: rotate(45deg);
 				transform: rotate(45deg);
-				background: #272833;
+				background: #FFFFFF;
 				content: '';
 				display: block;
 				height: 1em;
@@ -3955,12 +3955,12 @@
 				top: 0;
 				width: 100%;
 				z-index: 10001;
-				background: #272833;
+				background: #FFFFFF;
 				box-shadow: 0 0.125em 0.125em 0 rgba(0, 0, 0, 0.125);
 			}
 
 				#titleBar .title {
-					color: #ffffff;
+					color: #1C1D26;
 					display: block;
 					font-weight: 300;
 					height: 44px;
