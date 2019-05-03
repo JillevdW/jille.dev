@@ -6,6 +6,10 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
-  <app-topic-list></app-topic-list>
-</ion-content>
+<div class="flexbox">
+
+  <app-topic-list class="topic-list"></app-topic-list>
+
+  <app-detail-card *ngIf="largePage" class="detail-card"></app-detail-card>
+
+</div>

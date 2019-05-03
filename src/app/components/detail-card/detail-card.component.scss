@@ -1,0 +1,9 @@
+.card {
+    height: 100%;
+    overflow-y: auto;
+
+    .image {
+        max-height: 375px;
+        object-fit: cover;
+    }
+}

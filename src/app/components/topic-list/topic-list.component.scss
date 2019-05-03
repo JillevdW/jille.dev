@@ -1,25 +1,21 @@
-.content {
-    display: flex;
-    justify-content: start;
-}
+// .card-container {
+//     flex: 1;
+//     display: flex;
+//     align-items: center;
+//     flex-direction: column;
+// }
 
-.card-container {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
+// .contained {
+//     flex: 1;
+//     width: 400px;
 
-.contained {
-    flex: 1;
-    width: 400px;
-
-    .card {
-        width: 375px;
-    }
-}
+//     .card {
+//         width: 375px;
+//     }
+// }
 
 .card {
+    width: 375px;
     max-width: 375px;
 
     .image {

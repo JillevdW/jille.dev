@@ -1,1 +1,15 @@
+.flexbox {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+}
 
+.topic-list {
+    width: 450px;
+}
+
+.detail-card {
+    flex: 1;
+    height: 100%;
+}

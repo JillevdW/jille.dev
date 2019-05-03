@@ -1,6 +1,5 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { Topic } from 'src/app/models/topic';
-import { Platform } from '@ionic/angular';
 
 // tslint:disable:max-line-length
 
@@ -13,18 +12,7 @@ export class TopicListComponent implements OnInit {
 
   items: Array<Topic> = [];
 
-  pageWidth = 0;
-
-  // maxWidth = 1200;
-  maxWidth = 1000;
-
-  constructor(
-    private platform: Platform
-  ) {
-    this.platform.ready().then(() => {
-      this.pageWidth = this.platform.width();
-    });
-
+  constructor() {
     this.items.push({
       title: 'About me',
       type: 'Topic',
@@ -38,23 +26,6 @@ export class TopicListComponent implements OnInit {
     });
   }
 
-  @HostListener('window:resize')
-  onResize() {
-    this.pageWidth = this.platform.width();
-    console.log(this.pageWidth);
-  }
-
   ngOnInit() {}
-
-  get containerClass(): string {
-    if (this.pageWidth < this.maxWidth) {
-      return 'card-container';
-    }
-    return 'contained';
-  }
-
-  get largePage(): boolean {
-    return this.pageWidth > this.maxWidth;
-  }
 
 }
