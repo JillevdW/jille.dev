@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { TopicListComponent } from './topic-list/topic-list.component';
 import { DetailCardComponent } from './detail-card/detail-card.component';
+import { DetailModalComponent } from './detail-modal/detail-modal.component';
 
 
 @NgModule({
@@ -14,11 +15,16 @@ import { DetailCardComponent } from './detail-card/detail-card.component';
   ],
   declarations: [
     TopicListComponent,
-    DetailCardComponent
+    DetailCardComponent,
+    DetailModalComponent
   ],
   exports: [
     TopicListComponent,
-    DetailCardComponent
+    DetailCardComponent,
+    DetailModalComponent
+  ],
+  entryComponents: [
+    DetailModalComponent
   ]
 })
 export class ComponentsModule {}
