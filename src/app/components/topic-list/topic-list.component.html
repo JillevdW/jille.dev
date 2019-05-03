@@ -1,0 +1,31 @@
+<ion-content>
+  <div class="content">
+    <div [class]="containerClass">
+      <ion-card class="card" *ngFor="let topic of items">
+        <img class="image" [src]="topic.image">
+        <ion-card-header>
+          <ion-card-subtitle>{{ topic.type }}</ion-card-subtitle>
+          <ion-card-title>{{ topic.title }}</ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content>
+          {{ topic.shortDescription }}
+        </ion-card-content>
+      </ion-card>
+    </div>
+    
+    <div *ngIf="largePage" class="information-container">
+      <ion-card>
+        <img src="assets/images/me.jpg">
+        <ion-card-header>
+          <ion-card-subtitle>Topic</ion-card-subtitle>
+          <ion-card-title>About me</ion-card-title>
+        </ion-card-header>
+      
+        <ion-card-content>
+          This is some stuff about me! Woo!
+        </ion-card-content>
+      </ion-card>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,33 @@
+.content {
+    display: flex;
+    justify-content: start;
+}
+
+.card-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contained {
+    flex: 1;
+    width: 400px;
+
+    .card {
+        width: 375px;
+    }
+}
+
+.card {
+    max-width: 375px;
+
+    .image {
+        max-height: 375px;
+        object-fit: cover;
+    }
+}
+
+.information-container {
+    flex-grow: 1;
+}
