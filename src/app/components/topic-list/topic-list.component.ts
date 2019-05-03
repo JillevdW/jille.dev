@@ -1,4 +1,4 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Topic } from 'src/app/models/topic';
 import { TopicRepository } from 'src/app/repositories/topic.repository';
 
@@ -11,6 +11,8 @@ import { TopicRepository } from 'src/app/repositories/topic.repository';
 })
 export class TopicListComponent implements OnInit {
 
+  @Output() clicked = new EventEmitter<Topic>();
+
   items: Array<Topic> = [];
 
   constructor(
@@ -20,5 +22,9 @@ export class TopicListComponent implements OnInit {
   }
 
   ngOnInit() {}
+
+  clickedItem(topic: Topic) {
+    this.clicked.emit(topic);
+  }
 
 }

@@ -1,6 +1,6 @@
 <ion-content>
   <div>
-    <ion-card class="card" *ngFor="let topic of items">
+    <ion-card class="card" *ngFor="let topic of items" (click)="clickedItem(topic)">
       <img class="image" [src]="topic.image">
       <ion-card-header>
         <ion-card-subtitle>{{ topic.type }}</ion-card-subtitle>

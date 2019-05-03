@@ -1,5 +1,6 @@
 import { Component, HostListener } from '@angular/core';
 import { Platform } from '@ionic/angular';
+import { Topic } from '../models/topic';
 
 @Component({
   selector: 'app-home',
@@ -10,6 +11,8 @@ export class HomePage {
 
   pageWidth = 0;
   maxWidth = 1200;
+
+  selectedTopic: Topic = null;
 
   constructor(
     private platform: Platform
@@ -34,6 +37,10 @@ export class HomePage {
 
   get largePage(): boolean {
     return this.pageWidth > this.maxWidth;
+  }
+
+  topicClicked(topic: Topic) {
+    this.selectedTopic = topic;
   }
 
 }

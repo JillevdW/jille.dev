@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Topic } from 'src/app/models/topic';
 
 @Component({
   selector: 'app-detail-card',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./detail-card.component.scss'],
 })
 export class DetailCardComponent implements OnInit {
+
+  @Input() topic: Topic;
 
   constructor() { }
 

@@ -1,15 +1,7 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <div class="flexbox">
 
-  <app-topic-list class="topic-list"></app-topic-list>
+  <app-topic-list class="topic-list" (clicked)="topicClicked($event)"></app-topic-list>
 
-  <app-detail-card *ngIf="largePage" class="detail-card"></app-detail-card>
+  <app-detail-card *ngIf="largePage" [topic]="selectedTopic" class="detail-card"></app-detail-card>
 
 </div>
