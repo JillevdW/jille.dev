@@ -1,5 +1,6 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { Topic } from 'src/app/models/topic';
+import { TopicRepository } from 'src/app/repositories/topic.repository';
 
 // tslint:disable:max-line-length
 
@@ -12,18 +13,10 @@ export class TopicListComponent implements OnInit {
 
   items: Array<Topic> = [];
 
-  constructor() {
-    this.items.push({
-      title: 'About me',
-      type: 'Topic',
-      shortDescription: 'Some information about me, like why I do the things that I do!',
-      image: 'assets/images/me.jpg'
-    }, {
-      title: 'HiLo',
-      type: 'Project',
-      shortDescription: 'I help the founders of this social media app with their technical decisions, and I maintain their iOS application.',
-      image: 'https://thehiloapp.com/img/humans1.png'
-    });
+  constructor(
+    private topicRepo: TopicRepository
+  ) {
+    this.items = this.topicRepo.topics();
   }
 
   ngOnInit() {}
