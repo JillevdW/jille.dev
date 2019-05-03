@@ -1,13 +1,15 @@
-<ion-card-content>
-  <ion-card-header class="header-flex">
-    <div>
-      <ion-card-subtitle>{{ topic ? topic.type : "Read more" }}</ion-card-subtitle>
-      <ion-card-title>{{ topic ? topic.title : "Click a card on the left." }}</ion-card-title>
-    </div>
-    <ion-icon name="close-circle" (click)="closeModal()"></ion-icon>
-  </ion-card-header>
+<ion-content>
+  <ion-card-content>
+    <ion-card-header class="header-flex">
+      <div>
+        <ion-card-subtitle>{{ topic ? topic.type : "Read more" }}</ion-card-subtitle>
+        <ion-card-title>{{ topic ? topic.title : "Click a card on the left." }}</ion-card-title>
+      </div>
+      <ion-icon name="close-circle" class="close-icon" (click)="closeModal()"></ion-icon>
+    </ion-card-header>
 
-  <ion-card-content *ngIf="topic">
-    {{ topic.text }}
+    <ion-card-content class="card-content" *ngIf="topic">
+      {{ topic.text }}
+    </ion-card-content>
   </ion-card-content>
-</ion-card-content>
+</ion-content>
