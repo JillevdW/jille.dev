@@ -1,6 +1,7 @@
 import { Component, HostListener } from '@angular/core';
-import { Platform } from '@ionic/angular';
+import { Platform, ModalController } from '@ionic/angular';
 import { Topic } from '../models/topic';
+import { DetailModalComponent } from '../components/detail-modal/detail-modal.component';
 
 @Component({
   selector: 'app-home',
@@ -15,7 +16,8 @@ export class HomePage {
   selectedTopic: Topic = null;
 
   constructor(
-    private platform: Platform
+    private platform: Platform,
+    private modalController: ModalController
   ) {
     this.platform.ready().then(() => {
       this.pageWidth = this.platform.width();
@@ -47,6 +49,18 @@ export class HomePage {
 
   topicClicked(topic: Topic) {
     this.selectedTopic = topic;
+    if (!this.largePage) {
+      this.showDetailModal(topic);
+    }
+  }
+
+  async showDetailModal(topic: Topic) {
+    const modal = await this.modalController.create({
+      component: DetailModalComponent,
+      componentProps: { topic }
+    });
+
+    modal.present();
   }
 
 }
