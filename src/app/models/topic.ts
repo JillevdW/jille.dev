@@ -3,4 +3,5 @@ export class Topic {
     type: string;
     shortDescription: string;
     image: string;
+    text: string;
 }
