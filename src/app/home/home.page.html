@@ -1,6 +1,6 @@
 <div class="flexbox">
 
-  <app-topic-list class="topic-list" (clicked)="topicClicked($event)"></app-topic-list>
+  <app-topic-list [class]="topicListClass" (clicked)="topicClicked($event)"></app-topic-list>
 
   <app-detail-card *ngIf="largePage" [topic]="selectedTopic" class="detail-card"></app-detail-card>
 

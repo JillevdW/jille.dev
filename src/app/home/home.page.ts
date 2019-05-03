@@ -38,6 +38,13 @@ export class HomePage {
     return this.pageWidth > this.maxWidth;
   }
 
+  get topicListClass(): string {
+    if (this.pageWidth < this.maxWidth) {
+      return 'topic-list-full';
+    }
+    return 'topic-list';
+  }
+
   topicClicked(topic: Topic) {
     this.selectedTopic = topic;
   }
