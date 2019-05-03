@@ -25,7 +25,6 @@ export class HomePage {
   @HostListener('window:resize')
   onResize() {
     this.pageWidth = this.platform.width();
-    console.log(this.pageWidth);
   }
 
   get containerClass(): string {
