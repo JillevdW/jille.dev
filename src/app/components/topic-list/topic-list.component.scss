@@ -5,6 +5,7 @@
 }
 
 .card {
+    transition: transform .2s;
     width: 375px;
     max-width: 375px;
 
@@ -12,6 +13,12 @@
         max-height: 375px;
         object-fit: cover;
     }
+}
+
+.card:hover {
+    transform: scale(1.02);
+    -webkit-box-shadow: 0 6px 18px rgba(0,0,0,.12);
+    box-shadow: 0 6px 18px rgba(0,0,0,.12);
 }
 
 .information-container {
