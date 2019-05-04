@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { TopicListComponent } from './topic-list/topic-list.component';
 import { DetailCardComponent } from './detail-card/detail-card.component';
 import { DetailModalComponent } from './detail-modal/detail-modal.component';
+import { MarkdownModule } from 'ngx-markdown';
 
 
 @NgModule({
@@ -12,6 +13,7 @@ import { DetailModalComponent } from './detail-modal/detail-modal.component';
     IonicModule,
     CommonModule,
     FormsModule,
+    MarkdownModule.forChild()
   ],
   declarations: [
     TopicListComponent,
