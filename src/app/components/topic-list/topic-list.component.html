@@ -7,7 +7,7 @@
         <ion-card-title>{{ topic.title }}</ion-card-title>
       </ion-card-header>
     
-      <ion-card-content>
+      <ion-card-content *ngIf="topic.shortDescription">
         {{ topic.shortDescription }}
       </ion-card-content>
     </ion-card>
