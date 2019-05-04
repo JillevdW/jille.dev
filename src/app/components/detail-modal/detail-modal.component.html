@@ -9,7 +9,7 @@
     </ion-card-header>
 
     <ion-card-content class="card-content" *ngIf="topic">
-      {{ topic.text }}
+      <div class="markdown" markdown ngPreserveWhitespaces [data]="topic.text"></div>
     </ion-card-content>
   </ion-card-content>
 </ion-content>
