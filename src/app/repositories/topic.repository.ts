@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Topic } from '../models/topic';
+import * as moment from 'moment';
 
 // tslint:disable:max-line-length
 // tslint:disable:no-trailing-whitespace
@@ -21,13 +22,13 @@ export class TopicRepository {
             type: 'Topic',
             shortDescription: 'Some information about me, like why I do the things that I do!',
             image: 'assets/images/me.jpg',
-            text: this.mockText()
+            text: this.aboutMeText
           }, {
             title: 'HiLo',
             type: 'Project',
             shortDescription: 'I help the founders of this social media app with their technical decisions, and I maintain their iOS application.',
             image: 'https://thehiloapp.com/img/humans1.png',
-            text: this.mockText()
+            text: this.hiloText
           }, {
             title: 'beeproger',
             type: 'Chapter',
@@ -45,13 +46,19 @@ export class TopicRepository {
             type: 'Topic',
             shortDescription: '',
             image: 'assets/images/android.jpg',
-            text: this.mockText()
+            text: this.androidText
           }, {
-            title: 'Other Skills',
+            title: 'Other programming skills',
+            type: 'Topic',
+            shortDescription: '',
+            image: 'assets/images/macbook_xcode.jpg',
+            text: this.programmingSkillsText
+          }, {
+            title: 'Miscellaneous Skills',
             type: 'Topic',
             shortDescription: '',
             image: 'assets/images/other_skills.jpg',
-            text: this.mockMarkdown
+            text: this.miscellaneousText
           }];
     }
 
@@ -88,6 +95,69 @@ You think water moves fast? You should see ice. It moves like it has a mind. Lik
         
         
         Do you like that? Simply put: _I don't_. I prefer working **alone**.
+        `;
+    }
+
+    private get aboutMeText() {
+        const age = moment().diff('1997/06/13', 'years');
+        return `
+        I'm Jille van der Weerd, a ${age} year old mobile developer from the Netherlands. I decided to create this website because I was faced with a problem: there's only so much you can fit on a resume, and there's so many more things I'd like to share with you. And while I believe you can only _really_ get to know me by meeting face to face, maybe this is a nice way to become acquainted.
+
+        <br/>
+
+        # A little more about me
+        
+        This website is filled with a lot of formal things about who I am, what I've done and what I want to do, so I think it's a good idea to start with a less formal introduction to who I am. First of all, I consider myself a very creative person. I have always loved making music, drawing and writing. This eventually resulted in me studying journalism for a year, which I credit as being the reason I still write as much as I do. Growing up in a very musical family, I have played the guitar since I was eight and started singing when I was twelve, and about two years ago I started making a lot of music with some friends (mostly inspired by the Beatles, Oasis and Tom Petty).
+        
+        <br/>
+
+        Some days I like to sit in Cofee stores with my laptop open, working on my next big app idea, hoping to meet new people to connect with. Other days I like to stay in and watch Friends for the \`//TODO: add Friends rewatch counter here.\` time.
+        
+        <br/>
+        
+        # History
+        
+        I think I first got in touch with programming when I was about 8 years old. Together with a friend I'd make guide websites for several games we played. Not that long after that I started to dabble with some very simple scripts to make my day to day computer usage a bit easier.
+        
+        <br/>
+
+        I dropped the programming hobby to pursue a more conventionally-creative (worded like this because I do believe programming to be a creative outlet) path in my early teens. After eventually studying journalism for a year, I decided I'd pick up that old hobby of mine to see where it would take me.
+        
+        <br/>
+
+        The next year I would start an IT-related study (HBO-ICT at the Hanze University of Applied Sciences). The curriculum of this education (and many others through the Netherlands I later found out) wasn't really inspiring: we'd work with outdated technology to end up building things that were awfully similar to the things I was making as a kid. It wasn't until I started spending a lot of my free time developing iOS apps that I found out that I _really_ wanted to do this for a living. Coincidentally, that was also the moment I decided that I'd probably learn more in a shorter timeframe if I dropped out and instead spent all my time reading about Swift and building iOS apps. Not that long after that I landed my first job.
+        
+        <br/>
+        
+        # Future
+        
+        I've grown as a person and as a professional since the moment I landed that first job, and I have clear goals in mind for my future. At my current job I found out that I'm very interested in stuff like software architecture and other concepts that go a lot deeper than just writing code. This is one the reasons why I'd still like to pursue a master's degree at some point.
+        
+        <br/>
+
+        And the final goal for me would be to make the move to Silicon Valley, to (hopefully) work on the iOS operating system.
+        
+        <br/>
+
+        Of course that move is both literally and figuratively miles away, so I'm planning to take some leaps in between. If you've read this far and are looking for an enthusiastic addition to your team, or you just want to have a chat about some technical skills, please send me an email! 
+        `;
+    }
+
+    private get hiloText() {
+        return `
+        I joined the Hilo team just before I started working, to try and build a portfolio. The (NYC based) non-tech founders were looking for somebody to take over development of their iOS application and we really hit it off in a Skype call so I decided I'd help them out.
+
+        <br/>
+
+        Let's dive into what it is: at its core, Hilo is a social media app that aims to bring the social back to media. By omitting images from the posts, which are set up in a way that encourages sharing of the highs and lows of the users' days, we hope the content provided is more "real" than the content you'll see on other social networks like Instagram, where people only post the good things.
+        
+        <br/>
+        
+        Working on Hilo has taught me a lot about maintaining existing software, even if it isn't written the way you're used to. I've worked with the founders on the first of many steps towards attracting more users (through a slight redesign of their app and their app store listing), retaining those users (through email campaigns), and building a backend platform they can use to get some insight into the data about the app.
+        
+        <br/>
+        
+        There's one more thing I'd like to highlight. While it's not foreign in this line of work to have to explain technical concepts to people that aren't technically inclined, I see my role at Hilo to be that of a consultant that can carefully weigh the needs of both founders, and tries to propose a solution that best fits their needs and expectations.
         `;
     }
 
@@ -140,16 +210,89 @@ You think water moves fast? You should see ice. It moves like it has a mind. Lik
         
         - Standard frameworks (Foundation, UIKit)
 
-        - Xcode
+        - Relevant tooling (Xcode, Instruments, CocoaPods, App Store Connect)
         
         - Knowledge of commonly used design patterns (MVC, Delegation)
         
         - Knowledge of lower-level concepts (ARC, value/reference types)
         
-        - Knowledge about the [Apple HIG](https://developer.apple.com/design/human-interface-guidelines/ios/overview/themes/) and how to deliver an optimal user experience
+        - Knowledge about the [Apple HIG](https://developer.apple.com/design/human-interface-guidelines/ios/overview/themes/) and the [App Store Review Guidelines](https://developer.apple.com/app-store/review/guidelines/)
         
         - Knowledge about the iOS and MacOS platforms        
         `;
+    }
+
+    private get androidText() {
+        return `
+        It turns out that when you build a native iOS app, chances are your client is going to need an Android app at some point too. After a few months of working at beeproger I got the opportunity to learn how to build Android apps, and it has been a great journey. It has taught me different ways to look at so many facets of my development cycle; using different architectures, supporting a very large range of devices (and operating systems) and breaking out of the comfort zone that is iOS to build apps that adhere to a whole new set of design guidelines.
+
+        <br/>
+
+        Relevant skills:
+        
+        - Kotlin
+        - Java
+        - Standard frameworks (Android APIs, Jetpack, Support Library)
+        - Relevant tooling (Android Studio, Gradle, Google Play Store)
+        - Knowledge of commonly used design patters (MVVM, LiveData, Dependency Injection)
+        - Knowledge of commonly used libraries (OkHttp, Picasso, RetroFit)
+        - Familiar with the [Material Design Guidelines
+        `;
+    }
+
+    private get programmingSkillsText() {
+        return `
+        While working at beeproger I picked up some programming skills that aren't strictly related to mobile development, but they did help me better understand certain software development principles. This also sparked an interest in software development outside of the mobile world, to the point where I now spend a lot of my free time writing backend- and webapplications.
+
+        <br/>
+
+        Software related skills:
+        
+        - Laravel
+        - Angular (as a matter of fact, this website was built with Angular!)
+        - Nativescript (with Angular)
+        - Ionic (with Capacitor + Angular)
+        - Writing plugins for hybrid frameworks (React Native, Nativescript, Ionic with Capacitor)
+        
+        <br/>
+        
+        Other skills:
+        
+        - Git
+        - Agile/scrum
+        
+        <br/>
+        
+        I consider myself a well-rounded software developer with knowledge about most facets that go into the process of building mobile applications, from the concept stage all the way to deployment and testing.
+        
+        <br/>
+        
+        Relevant interests:
+        
+        - Machine learning (basic Tensorflow and CoreML, mostly computer vision and text classification)
+        - Augmented Reality (did a simple concept to look at the human body in AR)
+        - Test Driven Development
+        `;
+    }
+
+    private get miscellaneousText() {
+      return `
+      My interests are not just limited to programming: with an open mind and an attitude of curiosity I try to learn new things wherever I go. I've picked up some of the following skills around the office, and others just out of interest.
+
+      <br/>
+
+      Skills:
+      
+      - UI Design (Sketch/Photoshop)
+      - Writing
+      
+      <br/>
+      
+      Languages:
+      
+      - Dutch (native)
+      - English (full professional proficiency)
+      `;
     }
 
 }
