@@ -62,6 +62,24 @@ export class TopicRepository {
           }];
     }
 
+    private get friendsCount(): string {
+      function ordinal_suffix_of(i) {
+        const j = i % 10,
+            k = i % 100;
+        if (j === 1 && k !== 11) {
+            return i + 'st';
+        }
+        if (j === 2 && k !== 12) {
+            return i + 'nd';
+        }
+        if (j === 3 && k !== 13) {
+            return i + 'rd';
+        }
+        return i + 'th';
+      }
+      return ordinal_suffix_of(3);
+    }
+
     // MARK: Full markdown text for the topics.
 
     private mockText(): string {
@@ -111,7 +129,7 @@ You think water moves fast? You should see ice. It moves like it has a mind. Lik
         
         <br/>
 
-        Some days I like to sit in Cofee stores with my laptop open, working on my next big app idea, hoping to meet new people to connect with. Other days I like to stay in and watch Friends for the \`//TODO: add Friends rewatch counter here.\` time.
+        Some days I like to sit in Cofee stores with my laptop open, working on my next big app idea, hoping to meet new people to connect with. Other days I like to stay in and watch Friends for the ${this.friendsCount} time.
         
         <br/>
         
@@ -236,7 +254,7 @@ You think water moves fast? You should see ice. It moves like it has a mind. Lik
         - Relevant tooling (Android Studio, Gradle, Google Play Store)
         - Knowledge of commonly used design patters (MVVM, LiveData, Dependency Injection)
         - Knowledge of commonly used libraries (OkHttp, Picasso, RetroFit)
-        - Familiar with the [Material Design Guidelines
+        - Familiar with the [Material Design Guidelines](https://material.io/design/)
         `;
     }
 
