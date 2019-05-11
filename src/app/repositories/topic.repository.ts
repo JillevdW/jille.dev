@@ -21,7 +21,7 @@ export class TopicRepository {
             title: 'About me',
             type: 'Topic',
             shortDescription: 'Some information about me, like why I do the things that I do!',
-            image: 'assets/images/me.jpg',
+            image: 'assets/images/me_outside.jpg',
             text: this.aboutMeText
           }, {
             title: 'HiLo',
