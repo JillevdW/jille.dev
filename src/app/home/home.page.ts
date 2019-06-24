@@ -2,6 +2,7 @@ import { Component, HostListener } from '@angular/core';
 import { Platform, ModalController } from '@ionic/angular';
 import { Topic } from '../models/topic';
 import { DetailModalComponent } from '../components/detail-modal/detail-modal.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
@@ -17,7 +18,8 @@ export class HomePage {
 
   constructor(
     private platform: Platform,
-    private modalController: ModalController
+    private modalController: ModalController,
+    private router: Router
   ) {
     this.platform.ready().then(() => {
       this.pageWidth = this.platform.width();
@@ -48,6 +50,10 @@ export class HomePage {
   }
 
   topicClicked(topic: Topic) {
+    if (topic.title === 'App Analytics Library') {
+      this.router.navigateByUrl('/analytics');
+      return;
+    }
     this.selectedTopic = topic;
     if (!this.largePage) {
       this.showDetailModal(topic);

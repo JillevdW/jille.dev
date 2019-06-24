@@ -48,6 +48,12 @@ export class TopicRepository {
             image: 'assets/images/android.jpg',
             text: this.androidText
           }, {
+            title: 'App Analytics Library',
+            type: 'Project',
+            shortDescription: 'A suite of open source packages people can use to add self hosted analytics to their mobile applications.',
+            image: 'assets/images/analytics/mobile_user.svg',
+            text: ''
+          }, {
             title: 'Other programming skills',
             type: 'Topic',
             shortDescription: '',
