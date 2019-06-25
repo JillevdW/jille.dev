@@ -51,7 +51,7 @@ export class HomePage {
 
   topicClicked(topic: Topic) {
     if (topic.title === 'App Analytics Library') {
-      this.router.navigateByUrl('/analytics');
+      this.router.navigateByUrl('analytics');
       return;
     }
     this.selectedTopic = topic;
