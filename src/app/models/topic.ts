@@ -4,4 +4,5 @@ export class Topic {
     shortDescription: string;
     image: string;
     text: string;
+    customUrl: string = null;
 }

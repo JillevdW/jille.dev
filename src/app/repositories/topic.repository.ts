@@ -22,49 +22,57 @@ export class TopicRepository {
             type: 'Topic',
             shortDescription: 'Some information about me, like why I do the things that I do!',
             image: 'assets/images/me_outside.jpg',
-            text: this.aboutMeText
+            text: this.aboutMeText,
+            customUrl: null
           }, {
             title: 'HiLo',
             type: 'Project',
             shortDescription: 'I help the founders of this social media app with their technical decisions, and I maintain their iOS application.',
             image: 'https://thehiloapp.com/img/humans1.png',
-            text: this.hiloText
+            text: this.hiloText,
+            customUrl: null
           }, {
             title: 'beeproger',
             type: 'Chapter',
             shortDescription: 'While I started working here as an iOS developer, along the way I picked up several other skills like Android and Backend development.',
             image: 'assets/images/beepteam.jpg',
-            text: this.beeprogerText
+            text: this.beeprogerText,
+            customUrl: null
           }, {
             title: 'iOS',
             type: 'Topic',
             shortDescription: '',
             image: 'assets/images/macbook.jpg',
-            text: this.iosText
+            text: this.iosText,
+            customUrl: null
           }, {
             title: 'Android',
             type: 'Topic',
             shortDescription: '',
             image: 'assets/images/android.jpg',
-            text: this.androidText
+            text: this.androidText,
+            customUrl: null
           }, {
             title: 'App Analytics Library',
             type: 'Project',
             shortDescription: 'A suite of open source packages people can use to add self hosted analytics to their mobile applications.',
             image: 'assets/images/analytics/mobile_user.svg',
-            text: ''
+            text: '',
+            customUrl: 'analytics'
           }, {
             title: 'Other programming skills',
             type: 'Topic',
             shortDescription: '',
             image: 'assets/images/macbook_xcode.jpg',
-            text: this.programmingSkillsText
+            text: this.programmingSkillsText,
+            customUrl: null
           }, {
             title: 'Miscellaneous Skills',
             type: 'Topic',
             shortDescription: '',
             image: 'assets/images/other_skills.jpg',
-            text: this.miscellaneousText
+            text: this.miscellaneousText,
+            customUrl: null
           }];
     }
 
