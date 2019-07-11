@@ -60,6 +60,13 @@ export class TopicRepository {
             text: '',
             customUrl: 'analytics'
           }, {
+            title: 'Technical Accelerator',
+            type: 'Service',
+            shortDescription: 'My skillset that covers every facet of tech makes me the right person to help you take your technical startup to the next level.',
+            image: 'assets/images/analytics/charts.svg',
+            text: '',
+            customUrl: 'accelerator'
+          }, {
             title: 'Other programming skills',
             type: 'Topic',
             shortDescription: '',
